@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #1f242d;
+    color: #fff;
+    font-family: cursive;
+    font-size: large ;
+}
+header{ position: fixed ;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        padding: 20px 10%;
+        justify-content: space-between;
+      
+        z-index: 100;
+        font-family: cursive;
+}
+
+nav { 
+    display: inline-flex;
+  justify-content: center;
+  opacity: 0;
+  animation: slidebottom 2s ease forwards;   
+}
+.main_content h1,h2,h3,p{
+
+    animation:slidez 2s ease;
+
+}
+
+
+/* .social_links .link1{
+    opacity: 0;
+    animation:slide 2.5s ease-in-out forwards;
+}
+.social_links .link2{
+    opacity: 0;
+    animation:slide 2s ease-in-out forwards;
+}.social_links .link3{
+    opacity: 0;
+    animation:slide 1.5s ease-in-out forwards;
+}.social_links .link4{
+    opacity: 0;
+    animation:slide 1s ease-in forwards;
+} */
+
+@keyframes slidez {
+    from {transform:scale(0)}
+    90%  {transform:scale(1.1)}
+    to   {transform:scale(1)}
+}
+@keyframes slidebottom {
+    0%{
+        transform:translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity: 100%;
+    }
+}
+
+
+
+.logo{font-size: x-large;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideleft 2s ease forwards;
+    
+}
+@keyframes slideleft {
+    0%{
+        transform:translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity: 100%;
+    }
+}
+
+
+
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    font-weight: 600;   
+    
+}
+
+nav a:hover{
+    color: aqua ;
+}
+.content{   
+    
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 45px 10% 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around   ;
+}
+h3 span{
+    color: aqua;
+}
+.main_content{
+    margin-left : -100px;
+    max-width: 600px;
+}
+.home_img img{
+    border-radius:50%;
+    max-width: 500px;
+    margin-right: -50px;
+    opacity: 0;
+    animation: popup 2s ease forwards, loop 3s ease-in-out infinite;
+    animation-delay: 1s, 2s;
+}
+@keyframes popup {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    
+    }
+    
+}
+@keyframes loop {
+    
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+    50%{
+        transform: translateY(25px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.home_img img:hover{
+    box-shadow: 20px 10px 20px aqua;
+    transition: .5s ease-in-out;
+}
+
+.name{
+    font-size:50px;
+}
+.main_content p{
+    font-size: 16px;
+    margin-top: 30px;
+}
+.main_content h3{
+    font-size: x-large;
+}
+.main_content h3 span{
+    font-size: xx-large;
+}
+
+.social_links a {
+    display: inline-flex;   
+    height: 40px;
+    width: 40px;
+    border-radius:50% ;
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid aqua ;
+    transition: .5s ease;
+    color: aqua;
+    margin: 30px 15px 30px 0;
+    animation: slide .5s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+    opacity: 0;
+}
+@keyframes slide {
+    0%{
+        transform:translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+    
+}
+.social_links a:hover{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #1f242d ;
+    background-color: aqua;
+    color: #1f242d;
+    box-shadow: 0 0 20px aqua;
+
+} 
+.main_content .btn{
+    display: inline-block;
+    border: 2px solid #1f242d;
+    text-decoration: none;
+    color: #1f242d;
+    background-color: aqua;
+    padding: 12px 28px ;
+    border-radius: 40px;
+    opacity: 0;
+    animation: slideup .5s ease-out forwards;
+}
+@keyframes slideup {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+.main_content .btn:hover{
+    padding:18px 34px ;
+    border: 2px solid aqua ;
+    background-color: #1f242d;
+    color: aqua;
+    box-shadow: 0 0 20px aqua;
+    transition: .5s ease-in;
+
+}
